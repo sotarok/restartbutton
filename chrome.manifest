@@ -1,0 +1,7 @@
+content     restartbutton   chrome/content/
+skin        restartbutton   default/1.0 chrome/skin/
+
+overlay     chrome://browser/content/browser.xul   chrome://restartbutton/content/overlay.xul
+style       chrome://global/content/customizeToolbar.xul chrome://restartbutton/skin/restartbutton.css
+
+

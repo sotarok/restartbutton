@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://restartbutton/skin/restartbutton.css" type="text/css"?>
+
+<overlay id="restartOverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<script type="application/x-javascript">
+<![CDATA[
+// copied from extensions.js in toolkit.jar
+var restartButton = function() {};
+
+restartButton.prototype.restartApp = function () {
+    const nsIAppStartup = Components.interfaces.nsIAppStartup;
+
+    // Notify all windows that an application quit has been requested.
+    var os = Components.classes["@mozilla.org/observer-service;1"]
+        .getService(Components.interfaces.nsIObserverService);
+    var cancelQuit = Components.classes["@mozilla.org/supports-PRBool;1"]
+        .createInstance(Components.interfaces.nsISupportsPRBool);
+    os.notifyObservers(cancelQuit, "quit-application-requested", null);
+
+    // Something aborted the quit process. 
+    if (cancelQuit.data)
+        return;
+
+    // Notify all windows that an application quit has been granted.
+    os.notifyObservers(null, "quit-application-granted", null);
+
+    // Enumerate all windows and call shutdown handlers
+    var wm = Components.classes["@mozilla.org/appshell/window-mediator;1"]
+        .getService(Components.interfaces.nsIWindowMediator);
+    var windows = wm.getEnumerator(null);
+    while (windows.hasMoreElements()) {
+        var win = windows.getNext();
+        if (("tryToClose" in win) && !win.tryToClose())
+            return;
+    }
+    Components.classes["@mozilla.org/toolkit/app-startup;1"].getService(nsIAppStartup)
+        .quit(nsIAppStartup.eRestart | nsIAppStartup.eAttemptQuit);
+}
+
+]]>
+</script>
+
+<toolbarpalette id="BrowserToolbarPalette">
+    <toolbarbutton
+    id="restartbuttonButton"
+    engine="fx"
+    label="Restart"
+    onclick="(new restartButton()).restartApp();"
+    />
+</toolbarpalette>
+
+</overlay>
