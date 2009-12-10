@@ -5,7 +5,7 @@
     <em:id>restartbutton@strk.jp</em:id>
     <em:type>2</em:type>
     <em:name>Restart Button</em:name>
-    <em:version>0.1.2</em:version>
+    <em:version>0.1.3</em:version>
     <em:description>Add restart button to Firefox</em:description>
     <em:creator>sotarok</em:creator>
     <em:homepageURL>http://labs.strk.jp/fx/addons/</em:homepageURL>

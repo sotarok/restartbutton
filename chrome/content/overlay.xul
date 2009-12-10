@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet href="chrome://restartbutton/skin/restartbutton.css" type="text/css"?>
-
+<!DOCTYPE overlay SYSTEM "chrome://restartbutton/locale/locale.dtd">
 <overlay id="restartOverlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
@@ -46,7 +46,7 @@ restartButton.prototype.restartApp = function () {
     <toolbarbutton
     id="restartbuttonButton"
     engine="fx"
-    label="Restart"
+    label="&restartbutton.message;"
     onclick="(new restartButton()).restartApp();"
     />
 </toolbarpalette>

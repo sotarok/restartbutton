@@ -1,7 +1,12 @@
 content     restartbutton   chrome/content/
-skin        restartbutton   default/1.0 chrome/skin/
+skin        restartbutton   classic/1.0    chrome/skin/platform/winnt/  os=WINNT
+skin        restartbutton   classic/1.0    chrome/skin/platform/darwin/ os=Darwin
+skin        restartbutton   classic/1.0    chrome/skin/platform/linux/  os=Linux
+locale      restartbutton   ja             chrome/locale/ja/
+locale      restartbutton   en-US          chrome/locale/en-US/
 
 overlay     chrome://browser/content/browser.xul   chrome://restartbutton/content/overlay.xul
 style       chrome://global/content/customizeToolbar.xul chrome://restartbutton/skin/restartbutton.css
+
 
 
