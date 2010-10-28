@@ -47,7 +47,8 @@ restartButton.prototype.restartApp = function () {
     id="restartbuttonButton"
     engine="fx"
     label="&restartbutton.message;"
-    onclick="(new restartButton()).restartApp();"
+    class="toolbarbutton-1 chromeclass-toolbar-additional"
+    oncommand="(new restartButton()).restartApp();"
     />
 </toolbarpalette>
 
