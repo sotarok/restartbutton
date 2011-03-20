@@ -5,7 +5,7 @@
     <em:id>restartbutton@strk.jp</em:id>
     <em:type>2</em:type>
     <em:name>Restart Button</em:name>
-    <em:version>0.1.4</em:version>
+    <em:version>0.1.5</em:version>
     <em:description>Add restart button to Firefox</em:description>
     <em:creator>sotarok</em:creator>
     <em:homepageURL>http://strk.jp/</em:homepageURL>
@@ -14,7 +14,7 @@
       <Description>
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
         <em:minVersion>3.0b5</em:minVersion>
-        <em:maxVersion>4.0b2pre</em:maxVersion>
+        <em:maxVersion>4.0.*</em:maxVersion>
       </Description>
     </em:targetApplication>
     <em:localized>
