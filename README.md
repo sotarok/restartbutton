@@ -1,12 +1,11 @@
-Restart Button
-==================================
+# Restart Button
 
 "Restart Button" is a Firefox add-on.
 This add-on can help you to restart Firefox easier and faster.
 Add a custom button to restart Firefox.
 
-Development
-----------------------------------
+
+## Development
 
 Developing with GitHub and git-flow.
 Do not commit master branch directly but develop branch.
@@ -19,14 +18,19 @@ please request me to pull.
 * [sotarok / restartbutton](https://github.com/sotarok/restartbutton)
 
 
-Credits
-----------------------------------
+### Build
+
+To build xpi file, run following command:
+
+    $ ./build.sh
+
+## Credits
 
 Product powered by sotarok.
+
 * [@sotarok](http://twitter.com/sotarok)
 
 
-Mozilla Public License Version 1.1
-----------------------------------
+## Mozilla Public License Version 1.1
 
 * http://www.mozilla.org/MPL/MPL-1.1.html
